@@ -1,4 +1,4 @@
-Section ,Variety,Treatment,Subsection,pH_preplant,pH_post,ActiveC_preplant_mgkg,ActiveC_post_perc,TC_preplant_perc,TC_post_perc,M3P_preplant_mgkg,M3P_post_mgkg,TP_preplant_mgkg,TP_post_mgkg,OM_preplant_perc,OM_post_perc,WHC_preplant_perc,,,,,,,
+Section ,Variety,Treatment,Subsection,pH_preplant,pH_postharvest,Active_carbon_preplant_mgkg,Active_carbon_postharvest_perc,Total_carbon_preplant_perc,Total_carbon_postharvest_perc,Mehlich-3_phosphorous_preplant_mgkg,Mehlich-3_phosphorous_postharvest_mgkg,Total_phosphorous_preplant_mgkg,Total_phosphorous_postharvest_mgkg,Organic_matter_preplant_perc,Organic_matter_postharvest_perc,Water_holding_capacity_preplant_perc,Water_holding_capacity_postharvest_perc,,,,,,
 1,Sunn Hemp,High Fert,NA,7.7,7.56,931.78,0.040578,2.599,2.649,450.79,431.97,39004.71,35983.14328,14.94,17.66,94.04,94.04,,,,,,
 1,Sunn Hemp,Min Fert,NA,7.84,7.5,782.34,0.054507,2.839,3.599,452.74,430.64,39487.35,36595.85104,19.1,20.03,94.04,92.04,,,,,,
 1,Sunn Hemp,No Fert,NA,7.82,7.13,540.06,0.019255,1.845,2.216,525.13,479.15,40647.01,40149.74055,14.2,18.77,94.04,94.04,,,,,,
