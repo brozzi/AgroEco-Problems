@@ -37,22 +37,4 @@ Mean_stable_C <- ggplot(data = summary_table, aes(x = Unit, y = Mean_stable_carb
        x = "Unit", y = "Mean_stable_carbon_mgkg") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
-  # Summarizing data to create the mean and sd for postharvest
-
-summary_table_post <- Soil_working %>%
-  group_by(Unit, Sample_type == "Postharvest") %>%
-  summarize(
-    Mean_stable_carbon_mgkg = mean(Stable_carbon_mgkg, na.rm = TRUE),
-    SD_stable_carbon_mgkg = sd(Stable_carbon_mgkg, na.rm = TRUE))
-
-# Create a visualization of the Mean and SD
-
-bar_plot_post <- ggplot(data = summary_table, aes(x = Unit, y = Mean_stable_carbon_mgkg)) +
-  geom_bar(stat = "identity", position = "dodge", fill = "cyan") +
-  geom_errorbar(aes(ymin = Mean_stable_carbon_mgkg - SD_stable_carbon_mgkg, 
-                    ymax = Mean_stable_carbon_mgkg + SD_stable_carbon_mgkg), 
-                width = 0.2, position = position_dodge(0.9), color = "black") +
-  labs(title = "Mean Postharvest Stable Carbon", 
-       x = "Unit", y = "Mean_stable_carbon_mgkg") +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
   
