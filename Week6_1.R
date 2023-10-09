@@ -13,26 +13,27 @@ Soil_working <- Soil_data %>%
 
 # Next, is to visualize stable carbon
 
-hist_plot <- ggplot(data = Soil_working, aes(x = Stable_carbon_mgkg)) +
-  geom_histogram(binwidth = 10, fill = "cyan", color = "black", alpha = 0.7) +
-  labs(title = "Histogram of Stable_carbon_mgkg", x = "Stable_carbon_mgkg", y = "Frequency")
+Stable_Carbon <- ggplot(data = Soil_working, aes(x = Unit, y = Stable_carbon_mgkg, fill = Sample_type)) +
+  geom_bar(stat = "identity", position = "dodge", color = "black") +
+  labs(title = "Bar Plot of stable_carbon_mgkg by Unit and Sample Type", x = "Unit", y = "stable_carbon_mgkg") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 # Summarizing data to create the mean and SD for preplant
 
-summary_table_pre <- Soil_working %>%
-  group_by(Unit, Sample_type == "Preplant") %>%
+summary_table <- Soil_working %>%
+  group_by(Unit, Sample_type) %>%
   summarize(
      Mean_stable_carbon_mgkg = mean(Stable_carbon_mgkg, na.rm = TRUE),
      SD_stable_carbon_mgkg = sd(Stable_carbon_mgkg, na.rm = TRUE))
 
 # Create a visualization of the Mean and SD
 
-bar_plot_pre <- ggplot(data = summary_table, aes(x = Unit, y = Mean_stable_carbon_mgkg)) +
+Mean_stable_C <- ggplot(data = summary_table, aes(x = Unit, y = Mean_stable_carbon_mgkg, fill = Sample_type)) +
   geom_bar(stat = "identity", position = "dodge", fill = "cyan") +
   geom_errorbar(aes(ymin = Mean_stable_carbon_mgkg - SD_stable_carbon_mgkg, 
                     ymax = Mean_stable_carbon_mgkg + SD_stable_carbon_mgkg), 
                 width = 0.2, position = position_dodge(0.9), color = "black") +
-  labs(title = "Mean Preseason Stable Carbon", 
+  labs(title = "Mean Stable Carbon", 
        x = "Unit", y = "Mean_stable_carbon_mgkg") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
