@@ -96,7 +96,7 @@ SOC_stock_plot <- ggplot(data = Soil_working, aes(x = Unit, y = SOC_stock_tonsac
   facet_grid(. ~ Sample_type) +
   labs(title = "SOC Stock", x = "Unit", y = "SOC (tons/ac)") +
   theme(axis.text.x = element_text(angle = 0, hjust = 0.5), plot.title = element_text(hjust = 0.5)) +
-  scale_x_discrete(limits=c("1", "2","3","4","5","6","7","8","9","10","11","12"))
+  scale_x_discrete(limits = c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"))
 
 
 print(SOC_stock_plot)
@@ -122,7 +122,7 @@ mean_SOC_plot <- ggplot(data = summary_table, aes(x = Unit, y = Mean_SOC_tonsac,
   labs(title = "Mean SOC Stock", 
        x = "Unit", y = "SOC (tons/ac)", fill = "Sample Type") +
   theme(axis.text.x = element_text(angle = 0, hjust = 0.5), plot.title = element_text(hjust = 0.5)) +
-  scale_x_discrete(limits=c("1", "2","3","4","5","6","7","8","9","10","11","12"))
+  scale_x_discrete(limits = c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"))
 
 
 print(mean_SOC_plot)
