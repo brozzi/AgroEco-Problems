@@ -4,7 +4,7 @@
 
 ## My project takes my raw soil data from the EREC lab and modifies it to be visualized for reports and papers. So far, the only data that is being used is Carbon. 
 
-## The files to be reviewed are DataCarpentry_analysis_final.R and Analysis_plan.R
+## The files to be reviewed are Plot1_soil_working_raw.csv, DataCarpentry_analysis_final.R and Analysis_plan.R
 
 ## I attempted to create a function that would use each variable of the original Soil_data to calculate the change for each, but I haven't finished it yet. I only have the code for Carbon so far.
 
